@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dark luxury palette */
+  --background: #2E3136;
+  --foreground: #EDE9E2;
+  --card: #1C1E22;
+  --card-foreground: #EDE9E2;
+  --popover: #1C1E22;
+  --popover-foreground: #EDE9E2;
+  --primary: #C2A35D;
+  --primary-foreground: #111826;
+  --secondary: #3a3d42;
+  --secondary-foreground: #EDE9E2;
+  --muted: #3a3d42;
+  --muted-foreground: #B8B6B1;
+  --accent: #C2A35D;
+  --accent-foreground: #111826;
+  --destructive: #8b4a4a;
+  --destructive-foreground: #EDE9E2;
+  --border: rgba(194, 163, 93, 0.12);
+  --input: #3a3d42;
+  --ring: #C2A35D;
+  --radius: 0.25rem;
+
+  /* Custom dark exhibition tokens */
+  --velvet: #111826;
+  --deep: #1C1E22;
+  --surface: #2E3136;
+  --surface-elevated: #3a3d42;
+  --gold: #C2A35D;
+  --gold-dim: rgba(194, 163, 93, 0.4);
+  --gold-glow: rgba(194, 163, 93, 0.08);
+  --prussian: #0B1F3A;
+  --prussian-glow: rgba(11, 31, 58, 0.6);
+  --text-primary: #EDE9E2;
+  --text-secondary: #B8B6B1;
+  --text-muted: #7a7874;
+}
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --color-velvet: var(--velvet);
+  --color-deep: var(--deep);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-gold: var(--gold);
+  --color-gold-dim: var(--gold-dim);
+  --color-gold-glow: var(--gold-glow);
+  --color-prussian: var(--prussian);
+  --color-prussian-glow: var(--prussian-glow);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Film grain overlay */
+.grain-overlay::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Prussian blue radial aura */
+.prussian-aura::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, var(--prussian-glow) 0%, transparent 65%);
+  opacity: 0.4;
+}
+
+/* Subtle gold line accent */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+}
+
+/* Dark drafting grid */
+.drafting-lines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(0deg, transparent 49.5%, var(--gold) 49.5%, var(--gold) 50.5%, transparent 50.5%),
+    linear-gradient(90deg, transparent 49.5%, var(--gold) 49.5%, var(--gold) 50.5%, transparent 50.5%);
+  background-size: 80px 80px;
+}
