@@ -45,7 +45,7 @@ export function FinalDesignSection() {
           className="font-sans text-[10px] uppercase mb-4"
           style={{ color: "var(--taupe)" }}
         >
-          Chapter VI
+          Chapter V
         </motion.p>
         <div className="overflow-hidden">
           <motion.h2
