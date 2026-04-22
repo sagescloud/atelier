@@ -60,7 +60,7 @@ function ConceptImage({
         delay: 0.08 * index,
         ease: [0.16, 1, 0.3, 1],
       }}
-     className={`relative ${img.w} ${img.h} ${img.z}`}
+     className={`absolute ${img.w} ${img.h} ${img.z}`}
 style={{
   left: img.left,
   top: img.top,
