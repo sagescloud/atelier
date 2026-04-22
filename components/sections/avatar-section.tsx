@@ -26,7 +26,7 @@ export function AvatarSection() {
           className="font-sans text-[10px] tracking-[0.4em] uppercase mb-4"
           style={{ color: "var(--stone)" }}
         >
-          Chapter VII
+          Chapter VI
         </p>
         <h2
           className="font-serif text-3xl md:text-5xl font-light"
