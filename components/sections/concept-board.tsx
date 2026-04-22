@@ -60,7 +60,7 @@ function ConceptImage({
         delay: 0.08 * index,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className={`relative ${img.x} ${img.y} ${img.w} ${img.h} ${img.z}`}
+      className={`relative ${img.w} ${img.h} ${img.z}`}
     >
       <motion.div
         style={{ y }}
@@ -81,7 +81,7 @@ function ConceptImage({
             sizes="(max-width: 768px) 50vw, 30vw"
           />
           <div
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            className="relative inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
             style={{
               background:
                 "linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%, rgba(0,0,0,0.04) 100%)",
