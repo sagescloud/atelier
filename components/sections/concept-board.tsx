@@ -60,7 +60,12 @@ function ConceptImage({
         delay: 0.08 * index,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className={`absolute ${img.x} ${img.y} ${img.w} ${img.h} ${img.z}`}
+     className={`absolute ${img.w} ${img.h} ${img.z}`}
+style={{
+  left: img.left,
+  top: img.top,
+  transform: "translate(-50%, -50%)",
+}}
     >
       <motion.div
         style={{ y }}
