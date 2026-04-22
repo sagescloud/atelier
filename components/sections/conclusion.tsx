@@ -85,7 +85,7 @@ export function ConclusionSection() {
         className="mt-12 font-sans text-[10px] tracking-[0.5em] uppercase"
         style={{ color: "var(--taupe)" }}
       >
-        Fin
+      
       </motion.p>
     </section>
   )
