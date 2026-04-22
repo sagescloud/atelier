@@ -36,6 +36,7 @@ function ConceptImage({
     [img.parallaxSpeed * 80, -img.parallaxSpeed * 80]
   )
 
+  // Scatter directions for dynamic entry
   const angle = (index / conceptImages.length) * Math.PI * 2
   const scatterX = Math.cos(angle) * 80
   const scatterY = Math.sin(angle) * 80 + 40
@@ -59,10 +60,7 @@ function ConceptImage({
         delay: 0.08 * index,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className={`
-        ${img.w} ${img.h} ${img.z}
-        md:absolute ${img.x} ${img.y}
-      `}
+      className={`absolute ${img.x} ${img.y} ${img.w} ${img.h} ${img.z}`}
     >
       <motion.div
         style={{ y }}
@@ -111,8 +109,10 @@ export function ConceptBoardSection() {
       className="relative py-24 md:py-32 px-6 md:px-12 min-h-screen overflow-hidden"
       style={{ backgroundColor: "var(--cream)" }}
     >
+      {/* Drafting lines overlay */}
       <div className="drafting-lines absolute inset-0" />
 
+      {/* Section header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -126,7 +126,7 @@ export function ConceptBoardSection() {
           className="font-sans text-[10px] tracking-[0.4em] uppercase mb-4"
           style={{ color: "var(--taupe)" }}
         >
-          Chapter I
+          Chapter III
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
@@ -146,10 +146,8 @@ export function ConceptBoardSection() {
         />
       </motion.div>
 
-      <div
-        className="relative max-w-6xl mx-auto grid grid-cols-2 gap-4 md:block"
-        style={{ height: "clamp(600px, 120vh, 1200px)" }}
-      >
+      {/* Asymmetric collage with parallax */}
+      <div className="relative max-w-6xl mx-auto" style={{ height: "clamp(600px, 120vh, 1200px)" }}>
         {conceptImages.map((img, index) => (
           <ConceptImage
             key={img.src}
@@ -163,3 +161,4 @@ export function ConceptBoardSection() {
     </section>
   )
 }
+
