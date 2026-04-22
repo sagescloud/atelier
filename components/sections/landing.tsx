@@ -61,7 +61,7 @@ export function LandingSection() {
         >
         </motion.p>
 
-        <div className="overflow-hidden">
+        <div className="overflow-visible">
           <motion.h1
             initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function LandingSection() {
             The Birth of
           </motion.h1>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-visible">
           <motion.h1
             initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
