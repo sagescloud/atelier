@@ -12,8 +12,8 @@ import Image from "next/image"
 const conceptImages = [
   { src: "/images/concept-1.jpg", alt: "Fashion design concept sketch", x: "left-[2%]", y: "top-[5%]", w: "w-[45%] md:w-[28%]", h: "h-[200px] md:h-[280px]", z: "z-10", rotate: -2, parallaxSpeed: 0.3 },
   { src: "/images/concept-2.jpg", alt: "Fabric swatch collection", x: "right-[5%]", y: "top-[2%]", w: "w-[40%] md:w-[24%]", h: "h-[180px] md:h-[240px]", z: "z-20", rotate: 1.5, parallaxSpeed: 0.5 },
-  { src: "/images/concept-3.jpg", alt: "Fashion draping on mannequin", x: "left-[25%]", y: "top-[28%]", w: "w-[35%] md:w-[22%]", h: "h-[220px] md:h-[300px]", z: "z-30", rotate: -1, parallaxSpeed: 0.2 },
-  { src: "/images/concept-4.jpg", alt: "Architectural column detail", x: "right-[20%]", y: "top-[24%]", w: "w-[38%] md:w-[20%]", h: "h-[190px] md:h-[260px]", z: "z-20", rotate: 2, parallaxSpeed: 0.4 },
+  { src: "/images/concept-3.jpg", alt: "Fashion draping on mannequin", w: "w-[35%] md:w-[22%]", h: "h-[220px] md:h-[300px]", z: "z-30", rotate: -1, parallaxSpeed: 0.2 },
+  { src: "/images/concept-4.jpg", alt: "Architectural column detail", w: "w-[38%] md:w-[20%]", h: "h-[190px] md:h-[260px]", z: "z-20", rotate: 2, parallaxSpeed: 0.4 },
   { src: "/images/concept-5.jpg", alt: "Color palette board", x: "left-[5%]", y: "top-[55%]", w: "w-[42%] md:w-[26%]", h: "h-[170px] md:h-[230px]", z: "z-10", rotate: 1, parallaxSpeed: 0.35 },
   { src: "/images/concept-6.jpg", alt: "Renaissance painting detail", x: "right-[2%]", y: "top-[50%]", w: "w-[36%] md:w-[22%]", h: "h-[210px] md:h-[280px]", z: "z-30", rotate: -1.5, parallaxSpeed: 0.25 },
   { src: "/images/concept-7.jpg", alt: "Design tools on drafting paper", x: "left-[40%]", y: "top-[60%]", w: "w-[38%] md:w-[24%]", h: "h-[180px] md:h-[240px]", z: "z-20", rotate: 0.5, parallaxSpeed: 0.45 },
@@ -126,7 +126,7 @@ export function ConceptBoardSection() {
           className="font-sans text-[10px] tracking-[0.4em] uppercase mb-4"
           style={{ color: "var(--taupe)" }}
         >
-          Chapter III
+          Chapter I
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
