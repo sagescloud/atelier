@@ -18,7 +18,7 @@ export function LandingSection() {
     <section
       id="landing"
       ref={ref}
-      className="relative flex items-center justify-center min-h-screen overflow-hidden"
+      className="relative flex items-center justify-center min-h-screen overflow-visible"
       style={{ backgroundColor: "var(--velvet)" }}
     >
       {/* Prussian blue aura */}
