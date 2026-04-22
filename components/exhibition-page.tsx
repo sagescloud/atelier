@@ -15,8 +15,8 @@ export function ExhibitionPage() {
     <main>
       <Navigation />
       <LandingSection />
-      <MoodboardSection />
       <ConceptBoardSection />
+      <MoodboardSection />
       <StoryboardSection />
       <DesignJourneySection />
       <FinalDesignSection />
