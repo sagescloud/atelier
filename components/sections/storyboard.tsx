@@ -68,7 +68,7 @@ export function StoryboardSection() {
           className="font-sans text-[10px] uppercase mb-4"
           style={{ color: "var(--taupe)" }}
         >
-          Chapter IV
+          Chapter III
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
