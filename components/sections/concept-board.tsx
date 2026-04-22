@@ -126,7 +126,7 @@ export function ConceptBoardSection() {
           className="font-sans text-[10px] tracking-[0.4em] uppercase mb-4"
           style={{ color: "var(--taupe)" }}
         >
-          Chapter III
+          Chapter I
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
