@@ -2,8 +2,8 @@
 
 import { Navigation } from "@/components/navigation"
 import { LandingSection } from "@/components/sections/landing"
-import { MoodboardSection } from "@/components/sections/moodboard"
 import { ConceptBoardSection } from "@/components/sections/concept-board"
+import { MoodboardSection } from "@/components/sections/moodboard"
 import { StoryboardSection } from "@/components/sections/storyboard"
 import { DesignJourneySection } from "@/components/sections/design-journey"
 import { FinalDesignSection } from "@/components/sections/final-design"
